@@ -1,5 +1,7 @@
 package com.algorithm.linked_list;
 
+import javax.xml.bind.SchemaOutputResolver;
+
 /**
  * Created by ansheng on 2018/2/5.
  * 将单链表的部分反转，from开始的部分，to结束的部分，如果不满足 0<=from<=to<=N 则返回原链表
@@ -38,5 +40,17 @@ public class question5 {
             return head;
         }
         return prev;
+    }
+
+    public static void main(String[] args) {
+        SignNode head = new SignNode(1);
+        SignNode cur = head;
+        int i = 2;
+        while (i < 6){
+            cur = cur.next = new SignNode(i);
+            i++;
+        }
+        SignNode signNode = revertSectionSignNode(head, 1, 3);
+        System.out.println(signNode);
     }
 }
