@@ -1,4 +1,4 @@
-package com.algorithm.stack_and_queue;
+package com.algorithm.linked_list;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -9,16 +9,9 @@ import java.util.List;
  * 顺序为大到小
  *
  */
-public class question8 {
-    public class Node{
-        private Integer num;
-        private Node next;
+public class question1 {
 
-        public Node(Integer num) {
-            this.num = num;
-        }
-    }
-    public List<Integer> getCommon(Node head1,Node head2){
+    public List<Integer> getCommon(SignNode head1,SignNode head2){
         List<Integer> list = new LinkedList<Integer>();
         while (head1!=null && head2!=null){
             if (head1.num > head2.num){
