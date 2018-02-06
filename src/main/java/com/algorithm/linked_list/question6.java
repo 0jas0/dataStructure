@@ -37,6 +37,6 @@ public class question6 {
         cur.next = head;
         SignNode lastNode = getLastNode(head, 2);
         System.out.println(lastNode);
-        
+
     }
 }
