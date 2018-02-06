@@ -36,7 +36,15 @@ public class question7 {
                 qmin.removeFirst();
             }
             res += j-i;
+            i++;
         }
         return res;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,4,5,6};
+        int num = 2;
+        int num1 = getNum(arr, num);
+        System.out.println(num1);
     }
 }
