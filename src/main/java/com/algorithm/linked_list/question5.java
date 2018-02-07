@@ -1,5 +1,4 @@
 package com.algorithm.linked_list;
-
 import javax.xml.bind.SchemaOutputResolver;
 
 /**
