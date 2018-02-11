@@ -7,7 +7,7 @@ import java.util.Stack;
  * 如果最后不足k则直接返回
  */
 public class question11 {
-    public SignNode reverseNode(SignNode head, int k){
+    public static SignNode reverseNode(SignNode head, int k){
         if (k < 2){
             return head;
         }
@@ -24,11 +24,11 @@ public class question11 {
                 pre = resign1(stack, pre, next);
                 newhead = newhead == head ? cur : newhead;
             }
-            cur.next = next;
+            cur = next;
         }
         return newhead;
     }
-    public SignNode resign1(Stack<SignNode> stack, SignNode left, SignNode right){
+    public static SignNode resign1(Stack<SignNode> stack, SignNode left, SignNode right){
         SignNode pop = stack.pop();
         SignNode cur = pop;
         if (left != null){
@@ -42,5 +42,19 @@ public class question11 {
         }
         cur.next = right;
         return cur;
+    }
+
+    public static void main(String[] args) {
+        SignNode head = new SignNode(1);
+        int i = 2;
+        SignNode cur = head;
+        while (i < 10){
+            cur.next = new SignNode(i);
+            cur = cur.next;
+            i++;
+        }
+        cur.next = new SignNode(10);
+        SignNode newhead = reverseNode(head, 3);
+        System.out.println(newhead);
     }
 }
