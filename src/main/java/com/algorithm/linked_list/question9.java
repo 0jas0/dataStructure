@@ -45,7 +45,7 @@ public class question9 {
         current = head;
         while (current != null){
             next = current.next.next;
-            current.next.random = current.random.next;
+            current.next.random = current.random != null ? current.random.next : null;
             current = next;
         }
         Node res = head.next;
@@ -55,7 +55,7 @@ public class question9 {
             next = current.next.next;
             copy = current.next;
             current.next = next;
-            copy.next = next.next;
+            copy.next = next != null ? next.next : null;
             current = next;
         }
         return res;
