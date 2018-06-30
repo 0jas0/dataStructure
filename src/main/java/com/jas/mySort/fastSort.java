@@ -40,7 +40,7 @@ public class fastSort {
     }
 
     public static void main(String[] args) {
-        Integer[] arr = new Integer[]{3,1,5,6,7,2,9};
+        Integer[] arr = new Integer[]{2,1,3,6,7,5,9};
         fastSort(arr);
         System.out.println(Arrays.toString(arr));
     }
