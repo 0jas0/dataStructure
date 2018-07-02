@@ -46,7 +46,7 @@ public class question7 {
         }
         while (!stack.isEmpty()) {
             if (head.num != stack.pop().num) {
-                break;
+                return false;
             }
             head = head.next;
         }
