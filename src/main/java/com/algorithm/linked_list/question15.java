@@ -16,7 +16,7 @@ public class question15 {
         SignNode smallNode = cur;
         SignNode smallNodePre = null;
         while (cur != null){
-            if (smallNode.num < cur.num){
+            if (smallNode.num > cur.num){
                 smallNodePre = pre;
                 smallNode = cur;
             }
