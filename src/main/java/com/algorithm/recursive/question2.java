@@ -18,7 +18,7 @@ public class question2 {
      *
      * @param m 瓶子的个数
      * @param n 盖子的个数
-     * @param bottleNum 钱的数量
+     * @param bottleNum 水的数量
      * @return
      */
     public static int getRevertBottleNum(int m, int n, int bottleNum){
