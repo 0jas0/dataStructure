@@ -14,7 +14,7 @@ public class fastSort {
         int end = height;
         T key = arr[low];
         while(start<end){
-            while(start<end&&key.compareTo(arr[end])<=0){
+            while(start<end && key.compareTo(arr[end])<=0){
                 end--;
             }
             if(key.compareTo(arr[end])>0){
@@ -22,7 +22,7 @@ public class fastSort {
                 arr[end] = arr[start];
                 arr[start] = temp;
             }
-            while (start<end&&key.compareTo(arr[start])>=0){
+            while (start<end && key.compareTo(arr[start])>=0){
                 start++;
             }
             if(key.compareTo(arr[start])<0){

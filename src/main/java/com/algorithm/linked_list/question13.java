@@ -39,7 +39,7 @@ public class question13 {
             }
             head = head.next;
         }
-        SignNode cur = head;
+        SignNode cur = head.next;
         SignNode prev = head;
         SignNode next = null;
         while (cur != null){
@@ -58,11 +58,11 @@ public class question13 {
         SignNode head = new SignNode(1);
         SignNode cur = head;
         int i = 2;
-        while (i < 6){
+        while (i < 3){
             cur = cur.next = new SignNode(i);
             i++;
         }
-        SignNode node = removeValue2(head, 3);
+        SignNode node = removeValue2(head, 2);
         System.out.println(node);
     }
 }

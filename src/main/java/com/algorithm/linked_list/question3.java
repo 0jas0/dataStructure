@@ -8,7 +8,7 @@ package com.algorithm.linked_list;
  * 1 2 3 4 5 删除3
  */
 public class question3 {
-    public SignNode removeMidNode(SignNode head){
+    public static SignNode removeMidNode(SignNode head){
         if (head.next == null || head == null){
             return head;
         }
@@ -24,6 +24,12 @@ public class question3 {
         }
         prev.next = prev.next.next;
         return head;
+    }
+
+    public static void main(String[] args) {
+        SignNode head = new SignNode(1);
+        SignNode temp = head.next = new SignNode(2);
+        temp.next = new SignNode(3);
     }
 
 }

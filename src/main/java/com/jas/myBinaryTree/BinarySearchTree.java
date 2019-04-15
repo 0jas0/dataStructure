@@ -53,7 +53,7 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
     }
     public T findMax(BinaryNode node){
         if(node==null||node.right==null){
-            return node==null?null:node.element;
+            return node==null ? null : node.element;
         }
         return findMax(node.right);
     }
@@ -78,7 +78,7 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
              node.right = insert(t,node.right);
         }else if(num <0){
             node.left = insert(t,node.left);
-        }else {}
+        }
         return node;
     }
     public void remove(T t){

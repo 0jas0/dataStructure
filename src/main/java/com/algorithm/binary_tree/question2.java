@@ -31,8 +31,8 @@ public class question2 {
                     stack.push(root);
                     root = root.left;
                 }else {
-                    BinaryTree binaryTree = stack.pop();
-                    System.out.println(binaryTree.value);
+                    root = stack.pop();
+                    System.out.println(root.value);
                     root = root.right;
                 }
             }

@@ -15,7 +15,7 @@ public class question16 {
             }
             cur = cur.next;
         }
-        pre. next = node;
+        pre.next = node;
         node.next = cur;
         return  head.num > num ? node : head;
     }

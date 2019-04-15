@@ -20,7 +20,7 @@ public class question6 {
             if (list.getFirst() == i-w){
                 list.removeFirst();
             }
-            if (i>=w-1){
+            if (i-w+1 >= 0){
                 res[i-w+1]=arr[list.getFirst()];
             }
         }
