@@ -48,15 +48,16 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
     public T findMax(){
         return findMax(root);
     }
-    public T findMin(){
-        return findMin(root);
-    }
     public T findMax(BinaryNode node){
         if(node==null||node.right==null){
             return node==null ? null : node.element;
         }
         return findMax(node.right);
     }
+    public T findMin(){
+        return findMin(root);
+    }
+
     public T findMin(BinaryNode node){
         if(node==null){
             return null;
@@ -93,7 +94,7 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
             node.right = remove(t,node.right);
         }else if(num<0){
             node.left = remove(t,node.left);
-        }else if(node.left!=null&&node.right!=null){
+        }else if(node.left!=null && node.right!=null){
             T min = findMin(node.right);
             node.element = min;
             node.right=remove(min,node.right);
